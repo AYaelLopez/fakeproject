@@ -2,7 +2,6 @@ import java.util.ArrayList;
 
 
 public class Todo {
-    
     public static void main(String[] args) {
         ArrayList<InnerTodo> lst = new ArrayList<InnerTodo>();
 
@@ -12,16 +11,12 @@ public class Todo {
         System.out.println(lst);
 
     }
-
-
 }
 
 class InnerTodo {
 
     public String note;
     public String state;
-
-    InnerTodo(){}
 
     InnerTodo(String note, String state){
         this.note = note;
