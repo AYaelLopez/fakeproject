@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 
 public class assingment1 {
     public static void main(String[] args) {
@@ -9,17 +11,27 @@ public class assingment1 {
         lst.add(456);
         lst.add(789);
 
-        HashSet<String> mSet = new HashSet<String>();
+        HashSet<String> hSet = new HashSet<String>();
 
-        mSet.add("a");
-        mSet.add("b");
-        mSet.add("c");
+        hSet.add("a");
+        hSet.add("b");
+        hSet.add("c");
 
-        for (String string : mSet) {
-            System.out.println(string);
+        HashMap<String, Boolean> mSet = new HashMap<String, Boolean>();
+
+        mSet.put("evil", false);
+        mSet.put("kindness", true);
+        mSet.put("hope", null);
+
+
+        for (String str : hSet) {
+            System.out.println(str);
         }
-        for (Integer integer : lst) {
-            System.out.println(integer);
+        for (Integer intg : lst) {
+            System.out.println(intg);
         }
+        mSet.entrySet().forEach(entry -> {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }); 
     }
 }
